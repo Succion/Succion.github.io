@@ -196,11 +196,6 @@ http://www.tooplate.com/view/2102-constructive
 						</div>
 					</section>					
 				</div>	<!-- .tm-content -->							
-				<footer class="footer-link">
-					<p class="tm-copyright-text">Copyright &copy; 2018 Constructive Co. Ltd. 
-                    
-                    - Design: Tooplate</p>
-				</footer>
 			</div>	<!-- row -->			
 		</div>
 		<div id="preload-01"></div>
@@ -279,7 +274,6 @@ http://www.tooplate.com/view/2102-constructive
 		    	changePage(currentNavItem);
 		    	
 		    	setupCarousel();
-		    	setupFooter();
 
 		    	// Hide the nav on mobile
 		    	$("#tmSideBar").removeClass("show");
@@ -310,28 +304,6 @@ http://www.tooplate.com/view/2102-constructive
 			});
   		}
 
-  		// If there is enough room, stick the footer at the bottom of page content.
-  		// If not, place it after the page content
-  		function setupFooter() {
-  			
-  			var padding = 100;
-  			var footerPadding = 40;
-  			var mainContent = $("section"+currentPageID);
-  			var mainContentHeight = mainContent.outerHeight(true);
-  			var footer = $(".footer-link");
-  			var footerHeight = footer.outerHeight(true);
-  			var totalPageHeight = mainContentHeight + footerHeight + footerPadding + padding;
-  			var windowHeight = $(window).height();		
-
-  			if(totalPageHeight > windowHeight){
-  				$(".tm-content").css("margin-bottom", footerHeight + footerPadding + "px");
-  				footer.css("bottom", footerHeight + "px");  			
-  			}
-  			else {
-  				$(".tm-content").css("margin-bottom", "0");
-  				footer.css("bottom", "20px");  				
-  			}  			
-  		}
 
   		// Everything is loaded including images.
       	$(window).on("load", function(){
@@ -371,12 +343,10 @@ http://www.tooplate.com/view/2102-constructive
 			    setupCarousel();
 			    setupNav();
 			    setupNavToggle();
-			    setupFooter();
 
 			    // Resize Carousel upon window resize
 			    $(window).resize(function() {
 			    	setupCarousel();
-			    	setupFooter();
 			    });
       		}	      	
 		});
