@@ -1,8 +1,8 @@
 <?php
 
-$mongo = new MongoClient();
-$db = $mongo->donalddump;
-$collection = $db->info;
+$m = new MongoClient();
+$db = $m->selectDB("donalddump");
+$collection = $db->selectCollection("info");
 if($_POST) {
     $insert = array(
         'name' => $_POST['name'];
