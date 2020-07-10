@@ -1,8 +1,14 @@
 <?php
 
 $m = new MongoClient();
+echo "Connection to database successfully"
+
 $db = $m->selectDB("donalddump");
+echo "Database mydb selected";
+
 $collection = $db->selectCollection("info");
+echo "Collection selected succsessfully";
+
 if($_POST) {
     $insert = array(
         'name' => $_POST['name'];
