@@ -1,0 +1,31 @@
+label {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input,
+label {
+    margin: .4rem 0;
+}
+
+.form-control-cart { 
+    background: transparent;
+    border-color: white;
+    color: white;
+    font-weight: 300;
+    border-radius: 0;
+    padding: 15px;
+}
+
+.form-control-cart:focus {
+    background: transparent;
+    color: #33ccff;
+    border-color: #33ccff;
+    box-shadow: none;
+}
+
+.logo {
+    position: relative;
+    top: -100px;
+    left: 0;
+}
