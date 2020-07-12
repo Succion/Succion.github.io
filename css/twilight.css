@@ -32,6 +32,20 @@ label {
     height: 150px;
 }
 
+#home-title {
+    text-shadow: 2px 2px black;
+}
+
+.home-paragraph {
+    font-size: 21px;
+    text-shadow: 2px 2px black;
+}
+
+#number {
+    color: lightgreen;
+    font-size: 30px;
+}
+
 .contact {
     font-size: 17px;
 }
